@@ -24,7 +24,7 @@ namespace HowTo_Hotkeys_Winforms
                 case Keys.Escape: ExitApp(); return true;
                 case Keys.Right: Next(); return true;
                 case Keys.Left: Previous(); return true;
-                case Keys.NumPad0: Previous(); return true;
+                case Keys.NumPad0: button1.PerformClick(); return true;
                 default: return base.ProcessCmdKey(ref msg, keyData);
             }
         }
@@ -34,5 +34,10 @@ namespace HowTo_Hotkeys_Winforms
         private void Next() { MessageBox.Show("Next"); }
 
         private void ExitApp() { MessageBox.Show("Exit"); }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            MessageBox.Show("button click");
+        }
     }
 }
